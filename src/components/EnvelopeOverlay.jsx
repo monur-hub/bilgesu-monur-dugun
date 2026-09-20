@@ -1,6 +1,7 @@
 import { FloatingPetals } from './FloatingPetals';
 import { BurstPetals } from './BurstPetals';
 import kalp from '../assets/kalp.png';
+import mix from '../assets/mix.png';
 
 export function EnvelopeOverlay({ stage, onOpen, petalSeeds, burstSeeds }) {
   const lifting = stage === 'lifting';
@@ -57,7 +58,8 @@ export function EnvelopeOverlay({ stage, onOpen, petalSeeds, burstSeeds }) {
             <div
               style={{
                 position: 'absolute', inset: 0, borderRadius: 8,
-                background: 'linear-gradient(150deg,#fffdf9,#f3ece0)',
+                backgroundImage: `linear-gradient(150deg, rgba(255,253,249,0.12), rgba(90,70,40,0.08)), url(${mix})`,
+                backgroundSize: '360px 252px', backgroundPosition: 'top left', backgroundRepeat: 'no-repeat',
                 boxShadow: flapOpen ? '0 30px 70px rgba(90,70,40,0.32)' : '0 20px 50px rgba(90,70,40,0.25)',
                 border: '1px solid rgba(140,115,85,0.25)',
                 transform: flapOpen ? 'scale(1.04)' : 'scale(1)',
@@ -87,7 +89,8 @@ export function EnvelopeOverlay({ stage, onOpen, petalSeeds, burstSeeds }) {
               <div
                 style={{
                   position: 'absolute', top: 0, left: 0, right: 0, height: 125,
-                  background: 'linear-gradient(135deg,#fffaf2,#e9dfc4)',
+                  backgroundImage: `linear-gradient(135deg, rgba(255,250,242,0.12), rgba(90,70,40,0.1)), url(${mix})`,
+                  backgroundSize: '360px 252px', backgroundPosition: 'top left', backgroundRepeat: 'no-repeat',
                   clipPath: 'polygon(0 0, 100% 0, 50% 100%)', transformOrigin: 'top center',
                   transform: `rotateX(${flapOpen ? -172 : 0}deg) scale(${flapOpen ? 1.02 : 1})`,
                   transition: 'transform 1.5s cubic-bezier(.45,.05,.15,1) 0.15s',

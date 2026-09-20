@@ -1,13 +1,14 @@
-import { Flower } from './Flower';
+import { Leaf } from './Leaf';
 
 export function FloatingPetals({ seeds }) {
   return (
     <>
       {seeds.map((p, i) => (
-        <Flower
+        <Leaf
           key={i}
           size={p.size}
           hue={p.hue}
+          variant={p.leaf}
           rot={p.rot}
           opacity={0.8}
           style={{

@@ -63,6 +63,11 @@ export default function App() {
     setTimeout(() => (next ? play() : pause()), 0);
   };
 
+  const stopMusicForVideo = () => {
+    setMusicOn(false);
+    pause();
+  };
+
   return (
     <div style={{ fontFamily: "'Cormorant Garamond', serif", background: '#f7f3ec', minHeight: '100vh', position: 'relative', overflowX: 'hidden' }}>
       {!envelopeDone && (
@@ -85,11 +90,12 @@ export default function App() {
 
         <Hero countdownParts={countdownParts} scrollY={scrollY} tilt={heroTilt} onMove={onHeroMove} onLeave={onHeroLeave} />
         <OurStory />
-        <MeadowBand height={120} />
+        <MeadowBand height="clamp(70px, 18vw, 130px)" />
         <EventDetails events={EVENTS} />
         <RSVPForm />
+        <MeadowBand height="clamp(70px, 18vw, 130px)" />
         <LocationMaps events={EVENTS} />
-        <Footer />
+        <Footer onVideoPlay={stopMusicForVideo} />
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import mix from '../assets/mix.png';
+import bg3 from '../assets/bg3.png';
 import { HeartMark } from './HeartMark';
 
 export function Hero({ countdownParts, scrollY, tilt, onMove, onLeave }) {
@@ -12,7 +12,7 @@ export function Hero({ countdownParts, scrollY, tilt, onMove, onLeave }) {
       style={{
         position: 'relative', minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center',
         overflow: 'hidden', perspective: 1400,
-        backgroundImage: `linear-gradient(180deg, rgba(247,243,236,0.35) 0%, rgba(247,243,236,0.6) 45%, #f7f3ec 94%), url(${mix})`,
+        backgroundImage: `linear-gradient(180deg, rgba(247,243,236,0.25) 0%, rgba(247,243,236,0.55) 55%, #f7f3ec 96%), url(${bg3})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center top',
         backgroundRepeat: 'no-repeat',
@@ -35,9 +35,6 @@ export function Hero({ countdownParts, scrollY, tilt, onMove, onLeave }) {
         <div style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: 22, color: '#6b5236', marginBottom: 10, opacity: 0.85 }}>
           بسم الله الرحمن الرحيم
         </div>
-        <div style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: 14, fontWeight: 'bold', letterSpacing: 3, textTransform: 'uppercase', color: '#8a7355', maxWidth: 420, margin: '0 auto 22px', lineHeight: 1.6 }}>
-          Tüm Akraba ve Dostlarımızı Mutluluğumuzu Paylaşmaya Davet Ediyoruz
-        </div>
         <h1 style={{ fontFamily: "'Great Vibes',cursive", fontSize: 'clamp(56px,10vw,108px)', lineHeight: 1.05, margin: 0, color: '#5b4327', textShadow: '0 2px 24px rgba(90,70,40,0.18)' }}>
           Bilgesu
         </h1>
@@ -50,12 +47,9 @@ export function Hero({ countdownParts, scrollY, tilt, onMove, onLeave }) {
 
         <div style={{ width: 120, height: 1, background: 'linear-gradient(90deg,transparent,#c9a24b,transparent)', margin: '34px auto' }} />
 
-        <p style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: 'clamp(17px,2vw,21px)', color: '#5c6b4f', maxWidth: 520, margin: '0 auto 12px', lineHeight: 1.7 }}>
-          Tokat, Ankara ve Konya'da düzenlenecek düğün törenlerimizde sizleri de aramızda görmekten mutluluk duyarız.
-        </p>
-        <p style={{ fontFamily: "'Cormorant Garamond',serif", fontStyle: 'italic', fontSize: 'clamp(14px,1.6vw,17px)', color: '#a08b6f', maxWidth: 520, margin: '0 auto 40px', lineHeight: 1.6 }}>
-          (06 – 10 Ekim 2026)
-        </p>
+        <div style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: 14, fontWeight: 'bold', letterSpacing: 3, textTransform: 'uppercase', color: '#8a7355', maxWidth: 420, margin: '0 auto 30px', lineHeight: 1.6 }}>
+          Tüm Akraba ve Dostlarımızı Mutluluğumuzu Paylaşmaya Davet Ediyoruz
+        </div>
 
         <div style={{ display: 'flex', gap: 'clamp(6px,2vw,14px)', justifyContent: 'center', flexWrap: 'nowrap' }}>
           {countdownParts.map((part) => (

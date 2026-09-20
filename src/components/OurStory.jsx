@@ -1,12 +1,18 @@
+import bg2 from '../assets/bg2.png';
+
 export function OurStory() {
   return (
-    <section style={{ padding: '120px 24px', background: '#faf6ef', position: 'relative', overflow: 'hidden' }}>
+    <section
+      style={{
+        padding: '120px 24px', position: 'relative', overflow: 'hidden',
+        backgroundImage: `linear-gradient(180deg, rgba(250,246,239,0.72), rgba(250,246,239,0.94) 60%, #faf6ef), url(${bg2})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
       <div style={{ maxWidth: 640, margin: '0 auto', textAlign: 'center', position: 'relative', zIndex: 1 }}>
-        <div style={{ fontFamily: "'Playfair Display',serif", fontStyle: 'italic', fontSize: 14, letterSpacing: 4, textTransform: 'uppercase', color: '#c9a24b', marginBottom: 18 }}>
-          Bizim Hikayemiz
-        </div>
         <p style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: 'clamp(19px,2.4vw,24px)', lineHeight: 1.85, color: '#5c4a3a' }}>
-          Tevafuklarla başlayan hikâyemiz, ömürlük bir birlikteliğe dönüşüyor. Ailelerimizin ve sevdiklerimizin desteğiyle, huzurunuzda birbirimize söz verirken sizleri de şahitliğe davet ediyoruz. Bu önemli günümüzde yanımızda olan ve dualarıyla gönlü bizimle olan herkese şimdiden teşekkür ederiz.
+          Törenlerimizde siz saygıdeğer akraba ve dostlarımızı aramızda görmekten mutluluk duyarız. Yanımızda olan ve dualarıyla gönlü bizimle olan herkese şimdiden teşekkür ederiz.
         </p>
         <div style={{ width: 80, height: 1, background: '#c9a24b', margin: '36px auto', opacity: 0.49 }} />
         <div style={{ display: 'flex', justifyContent: 'center', gap: 60, flexWrap: 'wrap', fontFamily: "'Cormorant Garamond',serif", color: '#6b5d4c' }}>

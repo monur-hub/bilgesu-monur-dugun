@@ -1,4 +1,5 @@
 import { useCardTilt } from '../hooks/useCardTilt';
+import bg2 from '../assets/bg2.png';
 
 function EventCard({ ev }) {
   const { tilt, onMove, onLeave } = useCardTilt();
@@ -48,7 +49,13 @@ function EventCard({ ev }) {
 
 export function EventDetails({ events }) {
   return (
-    <section style={{ padding: '120px 24px', background: '#f7f3ec', position: 'relative', overflow: 'hidden' }}>
+    <section
+      style={{
+        padding: '120px 24px', position: 'relative', overflow: 'hidden',
+        backgroundImage: `linear-gradient(180deg, rgba(247,243,236,0.4), rgba(247,243,236,0.82) 65%, #f7f3ec), url(${bg2})`,
+        backgroundSize: 'cover', backgroundPosition: 'center',
+      }}
+    >
       <div style={{ textAlign: 'center', marginBottom: 56, position: 'relative', zIndex: 1 }}>
         <div style={{ fontFamily: "'Playfair Display',serif", fontStyle: 'italic', fontSize: 14, letterSpacing: 4, textTransform: 'uppercase', color: '#c9a24b', marginBottom: 14 }}>
           Ne Zaman, Nerede

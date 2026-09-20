@@ -1,6 +1,14 @@
+import bg2 from '../assets/bg2.png';
+
 export function LocationMaps({ events }) {
   return (
-    <section style={{ padding: '100px 24px', background: '#faf6ef', position: 'relative', overflow: 'hidden' }}>
+    <section
+      style={{
+        padding: '100px 24px', position: 'relative', overflow: 'hidden',
+        backgroundImage: `linear-gradient(180deg, rgba(250,246,239,0.4), rgba(250,246,239,0.82) 65%, #faf6ef), url(${bg2})`,
+        backgroundSize: 'cover', backgroundPosition: 'center',
+      }}
+    >
       <div style={{ textAlign: 'center', marginBottom: 44, position: 'relative', zIndex: 1 }}>
         <h2 style={{ fontFamily: "'Great Vibes',cursive", fontSize: 'clamp(30px,4.5vw,48px)', color: '#5b4327', margin: 0 }}>
           Konumlar<span style={{ marginLeft: 2, marginRight: 16 }}>/</span>Yol Tarifi

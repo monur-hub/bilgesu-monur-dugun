@@ -1,13 +1,14 @@
-import { Flower } from './Flower';
+import { Leaf } from './Leaf';
 
 export function BurstPetals({ seeds }) {
   return (
     <>
       {seeds.map((b, i) => (
-        <Flower
+        <Leaf
           key={i}
           size={b.size}
           hue={b.hue}
+          variant={b.leaf}
           rot={0}
           opacity={0.9}
           style={{
